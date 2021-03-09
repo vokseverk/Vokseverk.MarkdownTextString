@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE umbPackage [
+	<!ENTITY % packageInfo SYSTEM "package.ent">
+	%packageInfo;
+]>
+<manifest>
+	<propertyEditor>
+		<name>&propertyEditorName;</name>
+		<alias>&packageAlias;</alias>
+		<icon>icon-bulleted-list</icon>
+		<group>lists</group><!-- common,lists,media,people,pickers,rich content -->
+		<editor>
+			<valueType>STRING</valueType><!-- STRING,DATETIME,TEXT,INT,JSON -->
+			<view>&fileBaseName;.view.html</view>
+		</editor>
+		<!--
+		TODO: Need prevalues?
+		<prevalues>
+			<field>
+				<label>Rating</label>
+				<key>rating</key>
+				<description>Rate the content</description>
+				<view>number</view>
+			</field>
+		</prevalues>
+		-->
+		<!--
+		TODO: Need defaultConfig?
+		<defaultConfig>
+			<rating>5</rating>
+		</defaultConfig>
+		-->
+	</propertyEditor>
+
+	<javascript>&fileBaseName;.controller.js</javascript>
+	<css>&fileBaseName;.styles.css</css>
+</manifest>

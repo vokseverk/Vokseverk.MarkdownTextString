@@ -1,0 +1,6 @@
+angular.module("umbraco").controller("EDITOR_ALIASController", function($scope, $element) {
+	// All the calculations possible, maybe...
+	
+	// Set the property editor's value...
+	// $scope.model.value = 'Some computed value'
+})

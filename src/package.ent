@@ -1,0 +1,18 @@
+<!ENTITY packageVersion "1.0.0">
+
+<!ENTITY orgDisplayName "ORGANISATION_NAME">
+<!ENTITY orgNamespace "ORGANISATION_ALIAS">
+
+<!ENTITY propertyEditorName "DISPLAY_NAME">
+<!ENTITY propertyEditorAlias "EDITOR_ALIAS">
+
+<!ENTITY packageName "&orgDisplayName; &propertyEditorName;">
+<!ENTITY packageAlias "&orgNamespace;.&propertyEditorAlias;">
+<!ENTITY packageAuthor "&orgDisplayName;">
+
+<!ENTITY fileBaseName "propeditor">
+
+<!ENTITY packageAuthorURL "ORGANISATION_URL">
+<!ENTITY packageIconURL "TODO">
+<!ENTITY packageURL "TODO">
+<!ENTITY packageREADME "TODO">
