@@ -7,8 +7,8 @@
 	<propertyEditor>
 		<name>&propertyEditorName;</name>
 		<alias>&packageAlias;</alias>
-		<icon>icon-bulleted-list</icon>
-		<group>lists</group><!-- common,lists,media,people,pickers,rich content -->
+		<icon>icon-autofill</icon>
+		<group>common</group><!-- common,lists,media,people,pickers,rich content -->
 		<editor>
 			<valueType>STRING</valueType><!-- STRING,DATETIME,TEXT,INT,JSON -->
 			<view>&fileBaseName;.view.html</view>
