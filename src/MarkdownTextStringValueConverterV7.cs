@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Web;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Umbraco.Core;
@@ -7,8 +8,7 @@ using Umbraco.Core.PropertyEditors;
 using Umbraco.Core.Models.PublishedContent;
 
 namespace Vokseverk {
-	// TODO: Change Type her
-	[PropertyValueType(typeof(string))]
+	[PropertyValueType(typeof(MarkdownString))]
 	[PropertyValueCache(PropertyCacheValue.All, PropertyCacheLevel.Content)]
 	public class MarkdownTextStringPropertyConverter : PropertyValueConverterBase {
 		
@@ -29,35 +29,52 @@ namespace Vokseverk {
 		public class MarkdownString {
 			public MarkdownString(string text) {
 				TextValue = text;
-				MarkdownValue = Markdownify(text);
 			}
 			
 			public string TextValue { get; set; }
-			public HtmlString MarkdownValue {
+			public HtmlString HtmlValue {
 				get {
 					return Markdownify(TextValue);
 				}
 			}
 			
-			public override HtmlString ToString() {
-				return MarkdownValue;
+			public override string ToString() {
+				return TextValue;
 			}
 			
-			/// Simple (very) Markdown parsing for headers etc.
-			/// Currently handles *emphasis* and **strong emphasis**
+			public HtmlString AsHtml() {
+				return HtmlValue;
+			}
+			
+			// Simple (very) Markdown parsing for headers etc.
+			// Currently handles *emphasis*, _alternate emphasis_,
+			// **strong emphasis**, <URL> and [link text](URL).
 			private HtmlString Markdownify(string text) {
 				var patternStrong = @"\*\*([^\*]+)\*\*";
 				var replaceStrong = "<strong>$1</strong>";
 
-				var patternEmph = @"\*([^\*]+)\*";
+				var patternEmph1 = @"\*([^\*]+)\*";
+				var patternEmph2 = @"_([^_]+)_";
 				var replaceEmph = "<em>$1</em>";
-		
+				
+				var patternUrl = @"<(https?:\/\/[^ ]+?)>";
+				var replaceUrl = "<a href=\"$1\" target=\"_blank\" rel=\"noopener\">$1</a>";
+				
+				var patternLink = @"\[([^\]]+?)\]\(([^\)]+?)\)";
+				var replaceLink = "<a href=\"$2\">$1</a>";
+				
 				var strongRE = new Regex(patternStrong);
-				var emphRE = new Regex(patternEmph);
-		
+				var emphRE1 = new Regex(patternEmph1);
+				var emphRE2 = new Regex(patternEmph2);
+				var urlRE = new Regex(patternUrl);
+				var linkRE = new Regex(patternLink);
+				
 				var parsed = strongRE.Replace(text, replaceStrong);
-				parsed = emphRE.Replace(parsed, replaceEmph);
-		
+				parsed = emphRE1.Replace(parsed, replaceEmph);
+				parsed = emphRE2.Replace(parsed, replaceEmph);
+				parsed = urlRE.Replace(parsed, replaceUrl);
+				parsed = linkRE.Replace(parsed, replaceLink);
+				
 				return new HtmlString(parsed);
 			}
 		}
