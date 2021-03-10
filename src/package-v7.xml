@@ -17,9 +17,9 @@
 		<file name="MarkdownTextStringValueConverterV7.cs" path="/App_Code" />
 		
 		<!-- Language files for translation -->
-		<!-- <language ref="da-DK.xml" />
+		<language ref="da-DK.xml" />
 		<language ref="en-US.xml" />
-		<language ref="en-GB.xml" /> -->
+		<language ref="en-GB.xml" />
 	</files>
 	<info>
 		<package>

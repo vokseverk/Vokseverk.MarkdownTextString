@@ -16,13 +16,13 @@ fi
 cp src/*.css dist/package-v7/
 cp src/*.js dist/package-v7/
 cp src/*.html dist/package-v7/
-# cp src/lang/*.xml dist/package-v7/
+cp src/lang/*.xml dist/package-v7/
 
 # Copy files for v8
 cp src/*.css dist/package-v8/
 cp src/*.js dist/package-v8/
 cp src/*.html dist/package-v8/
-# cp src/lang/*.xml dist/package-v8/
+cp src/lang/*.xml dist/package-v8/
 
 # Copy the Value Converters
 cp src/*V7.cs dist/package-v7/
