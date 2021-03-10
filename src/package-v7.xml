@@ -13,6 +13,9 @@
 		<file ref="&fileBaseName;.styles.css" />
 		<file ref="&fileBaseName;.view.html" />
 		
+		<!-- PropertyValueConverter -->
+		<file name="MarkdownTextStringValueConverterV7.cs" path="/App_Code" />
+		
 		<!-- Language files for translation -->
 		<!-- <language ref="da-DK.xml" />
 		<language ref="en-US.xml" />
