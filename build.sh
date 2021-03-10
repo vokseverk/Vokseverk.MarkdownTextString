@@ -4,27 +4,39 @@ PACKAGE=`grep -o ' propertyEditorAlias \"\(.*\)\"' src/package.ent | awk '{print
 PKG_NAME="${NAMESPACE}.${PACKAGE}"
 
 # Create the dist directory if needed
-if [[ ! -d dist ]]
-	then mkdir -p dist/package
+if [[ ! -d dist ]]; then
+	mkdir -p dist/package-v7
+	mkdir -p dist/package-v8
 else
-	rm dist/package/*.*
+	rm dist/package-v7/*.*
+	rm dist/package-v8/*.*
 fi
 
-# Copy files
-cp src/*.css dist/package/
-cp src/*.js dist/package/
-cp src/*.html dist/package/
-# cp src/lang/*.xml dist/package/
+# Copy files for v7
+cp src/*.css dist/package-v7/
+cp src/*.js dist/package-v7/
+cp src/*.html dist/package-v7/
+# cp src/lang/*.xml dist/package-v7/
 
-# Copy the Value Converters to the dist/ folder
-cp src/*.cs dist/
+# Copy files for v8
+cp src/*.css dist/package-v8/
+cp src/*.js dist/package-v8/
+cp src/*.html dist/package-v8/
+# cp src/lang/*.xml dist/package-v8/
 
-# Transform the package.xml file
-xsltproc --novalid --xinclude --output dist/package/package.xml lib/packager.xslt src/package.xml
+# Copy the Value Converters
+cp src/*V7.cs dist/package-v7/
+cp src/*V8.cs dist/package-v8/
 
-# Transform the manifest.xml file
-xsltproc --novalid --xinclude --output dist/package/package.manifest lib/manifester.xslt src/manifest.xml
+# Transform the package XML files
+xsltproc --novalid --xinclude --output dist/package-v7/package.xml lib/packager.xslt src/package-v7.xml
+xsltproc --novalid --xinclude --output dist/package-v8/package.xml lib/packager.xslt src/package-v8.xml
+
+# Transform the manifest XML files
+xsltproc --novalid --xinclude --output dist/package-v7/package.manifest lib/manifester.xslt src/manifest-v7.xml
+xsltproc --novalid --xinclude --output dist/package-v8/package.manifest lib/manifester.xslt src/manifest-v8.xml
 
 
-# Build the ZIP file
-zip -j "dist/${PKG_NAME}-${VERSION}.zip" dist/package/* -x \*.DS_Store
+# Build the ZIP files
+zip -j "dist/${PKG_NAME}-${VERSION}_v7.zip" dist/package-v7/* -x \*.DS_Store
+zip -j "dist/${PKG_NAME}-${VERSION}_v8.zip" dist/package-v8/* -x \*.DS_Store
