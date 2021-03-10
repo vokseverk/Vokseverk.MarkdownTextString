@@ -1,27 +1,9 @@
-# Umbraco Property Editor Template
+<img align="right" src="images/markdowntextstring-icon.png" width="120" height="120" alt="An input field with some Markdown text on top of the Vokseværk 'fire-heart' logo" />
 
-This is our starter project for an Umbraco Property Editor.
+# Markdown TextString for Umbraco
 
-## Process
-
-Click the **Use this template** button to create a new copy of this repository
-in your own account. Then clone that new repository down to your local machine
-and get started:
-
-- [ ] Find the `src/package.ent` file and change the constants in there
-
-- [ ] You may want to change a few things in the `package.xml` and `manifest.xml` files as well
-
-- [ ] Look for `TODO`, `EDITOR_NAME` and `EDITOR_ALIAS` in various files and change accordingly
-
-- [ ] Edit/add/remove files in the `src/` folder and update the files section in the
-`package.xml` file
-
-- [ ] Edit the `PropertyConverterV(7|8).cs` files as well
-
-- [ ] Edit this README to describe your new property editor :)
-
-- [ ] Create an entry for your new package on [Our Umbraco][OURPKG]
+A property editor for those times where one just needs to be able to
+emphasize a word or two in a property that's created as a textstring.
 
 
 ## Developing & Building
