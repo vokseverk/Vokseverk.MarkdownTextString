@@ -29,7 +29,7 @@
 			<license url="http://opensource.org/licenses/MIT">MIT License</license>
 			<url>&packageURL;</url>
 			<requirements type="strict">
-				<major>7</major>
+				<major>8</major>
 				<minor>0</minor>
 				<patch>0</patch>
 			</requirements>
