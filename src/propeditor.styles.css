@@ -5,3 +5,9 @@
 .vv-md-textstring-wrapper .vv-md-textstring {
 	min-width: 66.6%;
 }
+
+.vv-md-textstring-hint {
+	opacity: 0.6;
+	font-size: 80%;
+	display: inline-block;
+}
