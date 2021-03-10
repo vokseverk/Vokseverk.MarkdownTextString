@@ -58,8 +58,12 @@ namespace Vokseverk {
 				return TextValue;
 			}
 			
-			public HtmlString AsHtml() {
+			public HtmlString ToHtml() {
 				return HtmlValue;
+			}
+			
+			public HtmlString ToHTML() {
+				return ToHtml();
 			}
 			
 			// Simple (very) Markdown parsing for headers etc.
