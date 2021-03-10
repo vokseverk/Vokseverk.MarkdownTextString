@@ -47,7 +47,15 @@
 			<xsl:apply-templates />
 		</files>
 	</xsl:template>
-
+	
+	<xsl:template match="file[@path]">
+		<file>
+			<guid><xsl:value-of select="@name" /></guid>
+			<orgPath><xsl:value-of select="@path" /></orgPath>
+			<orgName><xsl:value-of select="@name" /></orgName>
+		</file>
+	</xsl:template>
+	
 	<xsl:template match="file[@ref]">
 		<file>
 			<guid><xsl:value-of select="@ref" /></guid>
