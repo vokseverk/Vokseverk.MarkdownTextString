@@ -13,6 +13,6 @@
 <!ENTITY fileBaseName "propeditor">
 
 <!ENTITY packageAuthorURL "https://vokseverk.dk/">
-<!ENTITY packageIconURL "https://raw.githubusercontent.com/vokseverk/Vokseverk.MarkdownTextString/main/images/markdowntextstring-icon.png">
+<!ENTITY packageIconURL "https://raw.githubusercontent.com/vokseverk/Vokseverk.MarkdownTextString/main/images/vv-markdowntextstring-icon.png">
 <!ENTITY packageURL "https://our.umbraco.com/packages/backoffice-extensions/markdown-textstring/">
 <!ENTITY packageREADME "A property editor for simple Markdown syntax within a single line or paragraph.">

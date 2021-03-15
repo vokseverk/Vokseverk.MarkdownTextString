@@ -1,6 +1,6 @@
-<img align="right" src="images/markdowntextstring-icon.png" width="120" height="120" alt="An input field with some Markdown text on top of the Vokseværk 'fire-heart' logo" />
-
 # Markdown TextString for Umbraco
+
+<img align="right" src="images/vv-markdowntextstring-icon.png" width="180" height="180" alt="An input field with some Markdown text inside a square with the Vokseværk ‘fire-heart’ logo" />
 
 A property editor for those times where one just needs to be able to
 emphasize a word or two in a property that's created as a textstring.
