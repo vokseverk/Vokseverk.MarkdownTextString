@@ -1,18 +1,30 @@
 <!ENTITY packageVersion "1.0.2">
+<!ENTITY packageVersionV9 "2.0.0">
+<!ENTITY packageVersionV10 "3.0.2">
+<!ENTITY packageVersionV11 "4.0.0">
 
 <!ENTITY orgDisplayName "Vokseværk">
 <!ENTITY orgNamespace "Vokseverk">
 
+<!ENTITY packageNamespace "Vokseverk">
+<!ENTITY packageSafeName "MarkdownTextString">
+<!ENTITY packageName "Vokseværk Markdown TextString">
+<!ENTITY packageAlias "Vokseverk.MarkdownTextString"><!-- Don't build this from entities! -->
+<!ENTITY packageAuthor "Vokseværk">
+
 <!ENTITY propertyEditorName "Markdown TextString">
 <!ENTITY propertyEditorAlias "MarkdownTextString">
-
-<!ENTITY packageName "&orgDisplayName; &propertyEditorName;">
-<!ENTITY packageAlias "&orgNamespace;.&propertyEditorAlias;">
-<!ENTITY packageAuthor "&orgDisplayName;">
 
 <!ENTITY fileBaseName "propeditor">
 
 <!ENTITY packageAuthorURL "https://vokseverk.dk/">
 <!ENTITY packageIconURL "https://raw.githubusercontent.com/vokseverk/Vokseverk.MarkdownTextString/main/images/vv-markdowntextstring-icon.png">
-<!ENTITY packageURL "https://our.umbraco.com/packages/backoffice-extensions/markdown-textstring/">
+<!ENTITY packageURL "https://github.com/vokseverk/Vokseverk.MarkdownTextString">
 <!ENTITY packageREADME "A property editor for simple Markdown syntax within a single line or paragraph.">
+
+<!ENTITY packageIconFile "vv-keyvalueeditor-icon.png">
+<!ENTITY packageRepoURL "https://github.com/vokseverk/Vokseverk.MarkdownTextString">
+
+<!ENTITY packageREADME "A property editor for those times where you just need to be able to emphasize a word or two in a property that's created as a textstring.">
+<!ENTITY packageTags "umbraco markdown textstring property-editor umbraco-marketplace">
+<!ENTITY packageDESC "An Umbraco property editor for those times where you just need to be able to emphasize a word or two in a property that's created as a textstring.">
