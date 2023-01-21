@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Html;
 using Umbraco.Extensions;
 using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Models;
