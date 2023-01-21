@@ -10,12 +10,12 @@
 
 	<Target Name="Copy&packageNamespace;&packageSafeName;PackageAssets" BeforeTargets="Build">
 		<ItemGroup>
-			<PackageAliasContentFiles Include="$(PackageAliasContentFilesPath)" />
+			<PackageAliasContentFiles Include="$(&packageNamespace;&packageSafeName;ContentFilesPath)" />
 		</ItemGroup>
-		<Message Text="Copying &packageSafeName; files: $(PackageAliasContentFilesPath) - #@(PackageAliasContentFiles->Count()) files"  Importance="high" />
+		<Message Text="Copying &packageSafeName; files: $(&packageNamespace;&packageSafeName;ContentFilesPath) - #@(&packageNamespace;&packageSafeName;ContentFiles->Count()) files"  Importance="high" />
 		<Copy
-			SourceFiles="@(PackageAliasContentFiles)"
-			DestinationFiles="@(PackageAliasContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\&packageAlias;\%(RecursiveDir)%(Filename)%(Extension)')"
+			SourceFiles="@(&packageNamespace;&packageSafeName;ContentFiles)"
+			DestinationFiles="@(&packageNamespace;&packageSafeName;ContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\&packageAlias;\%(RecursiveDir)%(Filename)%(Extension)')"
 			SkipUnchangedFiles="true" />
 
 	</Target>
@@ -25,7 +25,7 @@
 			<PackageAliasContentFilesDir Include="$(MSBuildProjectDirectory)\App_Plugins\&packageAlias;\" />
 		</ItemGroup>
 		<Message Text="Clear old &packageSafeName; files"  Importance="high" />
-		<RemoveDir Directories="@(PackageAliasContentFilesDir)"  />
+		<RemoveDir Directories="@(&packageNamespace;&packageSafeName;ContentFilesDir)"  />
 	</Target>
 
 </Project>
