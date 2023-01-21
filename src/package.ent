@@ -1,6 +1,6 @@
 <!ENTITY packageVersion "1.0.2">
 <!ENTITY packageVersionV9 "2.0.0">
-<!ENTITY packageVersionV10 "3.0.2">
+<!ENTITY packageVersionV10 "3.0.0">
 <!ENTITY packageVersionV11 "4.0.0">
 
 <!ENTITY orgDisplayName "Vokseværk">
@@ -22,7 +22,7 @@
 <!ENTITY packageURL "https://github.com/vokseverk/Vokseverk.MarkdownTextString">
 <!ENTITY packageREADME "A property editor for simple Markdown syntax within a single line or paragraph.">
 
-<!ENTITY packageIconFile "vv-keyvalueeditor-icon.png">
+<!ENTITY packageIconFile "vv-markdowntextstring-icon.png">
 <!ENTITY packageRepoURL "https://github.com/vokseverk/Vokseverk.MarkdownTextString">
 
 <!ENTITY packageREADME "A property editor for those times where you just need to be able to emphasize a word or two in a property that's created as a textstring.">
