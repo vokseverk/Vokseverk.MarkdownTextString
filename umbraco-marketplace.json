@@ -1,7 +1,9 @@
 {
 	"AuthorDetails": {
-		"Name": "Vokseværk",
-		"ImageUrl": "https://github.com/vokseverk.png"
+		"Name": "Chriztian Steinmeier",
+		"ImageUrl": "https://github.com/greystate.png",
+		"Description": "Frontend & Umbraco Developer @ Vokseværk in Denmark. 6× Umbraco MVP.",
+		"Url": "https://greystate.dk/who/"
 	},
 	"Category": "Editor Tools",
 	"Screenshots": [
